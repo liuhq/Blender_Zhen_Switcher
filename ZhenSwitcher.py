@@ -2,7 +2,7 @@ bl_info = {
     "name": "Blender Zhen Switcher",
     "description": "switch zh/en",
     "author": "QoQiyu",
-    "version": (1, 0, 0),
+    "version": (1, 0, 1),
     "blender": (3, 0, 0),
     "location": "",
     "warning": "",
@@ -26,7 +26,7 @@ class ZhenSwitcherPreferences(bpy.types.AddonPreferences):
 
 class ZhenSwitcher(bpy.types.Operator):
     """Switch zh/en: 切换中英文"""
-    bl_idname = 'ui.zhen_switcher'
+    bl_idname = 'wm.zhen_switcher'
     bl_label = 'Switch zh/en'
     bl_options = {'UNDO'}
 
@@ -46,14 +46,16 @@ class ZhenSwitcher(bpy.types.Operator):
 
 
 def drawSwitcherUI(self,context):
-    self.layout.operator('ui.zhen_switcher', text='Zhen')
+    self.layout.operator('wm.zhen_switcher', text='Zhen')
 
 def register():
     bpy.utils.register_class(ZhenSwitcher)
     bpy.utils.register_class(ZhenSwitcherPreferences)
+    # toggle comments to remove the button
     bpy.types.VIEW3D_HT_tool_header.append(drawSwitcherUI)
 
 def unregister():
     bpy.utils.unregister_class(ZhenSwitcher)
     bpy.utils.unregister_class(ZhenSwitcherPreferences)
+    # toggle comments to remove the button
     bpy.types.VIEW3D_HT_tool_header.remove(drawSwitcherUI)
