@@ -41,7 +41,7 @@ blender Zhen 中英一键切换脚本
 
 > P.S. 个人学艺不精，大佬如有直接在设置中去除按钮的方法，还请告知或直接PR，谢谢啦！
 
-[release]: https://github.com/qoqiyu/Blender_Zhen_Switcher/releases/tag/v1.0.0
+[release]: https://github.com/qoqiyu/Blender_Zhen_Switcher/releases
 [step_01]: ./img/step_01.png "step 1"
 [step_02]: ./img/step_02.png "step 2"
 [step_03]: ./img/step_03.png "step 3"
